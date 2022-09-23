@@ -14,6 +14,9 @@ const menuData = [
   "Lorem Ipsum 9",
   "Lorem Ipsum 10",
   "Lorem Ipsum 11",
+  "Lorem Ipsum 12",
+  "Lorem Ipsum 13",
+  "Lorem Ipsum 14",
 ];
 
 const Menu = () => {
@@ -23,8 +26,8 @@ const Menu = () => {
     setIndex(i);
   };
   return (
-    <div className="flex flex-row justify-around py-4 px-2">
-      <button className=" w-8 h-8 p-2 shadow-light-red shadow-lg">
+    <div className="flex flex-row justify-between h-14 max-h-14 px-9">
+      <button className=" w-8 h-8 px-2 shadow-light-red shadow-lg self-center">
         <Image
           src={menuIcon}
           layout="responsive"
@@ -33,14 +36,14 @@ const Menu = () => {
           alt="menu"
         />
       </button>
-      <ul className="flex flex-row">
+      <ul className="2xl:flex xl:flex flex-row h-min self-center hidden">
         {menuData.map((category, i) => (
           <li
             onClick={() => handleClick(i)}
             className={
               i === index
-                ? "text-base mx-2 font-semibold whitespace-nowrap text-red cursor-pointer"
-                : "text-base mx-2 font-semibold whitespace-nowrap cursor-pointer"
+                ? "text-sm mx-2 font-semibold whitespace-nowrap text-red cursor-pointer"
+                : "text-sm mx-2 font-semibold whitespace-nowrap cursor-pointer"
             }
             key={i}
           >
