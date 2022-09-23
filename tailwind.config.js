@@ -14,7 +14,7 @@ module.exports = {
       transparent: "transparent",
       red: "#FF0000",
       white: "white",
-      green: "green",
+      green: "#0BC15C",
       gray: "#BBBBBB",
       blue: "blue",
       "light-red":"#F8CDCD",
@@ -22,12 +22,33 @@ module.exports = {
       "granite-gray": "#606060",
       "border-gray": "rgba(196, 196, 196, 0.7)",
       "charleston": "#26282B",
-      
+      "snow": "#FAF9F9",
+      "light-silver": "#D7D7D7",
+      "smoke-white": "#FEFEFE",
+      "black-olive": "#3E3E3E",
+      "queen-blue": "#477294",
+      "indigo": "#1C3D57",
+      "quick-silver": "#A5A5A5",
+      "violet": "violet",
+      "yellow": "yellow",
+      "raisin-black": "#221F23",
+
     },
 
     fontFamily: {
       'comfortaa': ["'Comfortaa', cursive"],
       'sans-pro': ["'Source Sans Pro', sans-serif"]
+    },
+
+    borderRadius: {
+      'none': '0',
+      'sm': '0.125rem',
+      DEFAULT: '0.25rem',
+      DEFAULT: '4px',
+      'md': '0.375rem',
+      'lg': '0.5rem',
+      'full': '9999px',
+      'large': '12px',
     },
 
     screens: {
@@ -53,12 +74,12 @@ module.exports = {
 
     fontSize: {
       xxs: ".6875rem",
-      xs: ".75rem",
+      xs: ".75rem", //12px
       sm: ".813rem",
-      tiny: ".875rem",
-      base: "1rem",
+      tiny: ".875rem", //14px
+      base: "1rem", //16px
       md: "0.9375rem",
-      lg: "1.125rem",
+      lg: "1.125rem", //18px
       xl: "1.375rem",
       "2xl": "1.5rem",
       "3xl": "1.875rem",
@@ -77,10 +98,18 @@ module.exports = {
         md: "1rem",
         lg: "1rem",
         xl: "2rem",
-        "2xl": "4rem",
+        "2xl": "1rem",
       },
     },
-    extend: {},
+    extend: {
+      boxShadow: {
+        'DEFAULT': '0px 2px 5px #BBBBBB',
+        'vector': '-4px -6px 8px -6px black',
+        'custom-shadow': 'rgba(0, 0, 0, 0.35) 0px 5px 15px'
+      }
+    },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/line-clamp'),
+  ],
 }

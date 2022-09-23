@@ -1,8 +1,6 @@
 import Head from 'next/head'
-import Footer from '../components/Footer'
-import Header from '../components/Header'
 import ProductContainer from '../components/ProductContainer'
-
+import Menu from '../components/Menu'
 
 export default function Home() {
   return (
@@ -13,9 +11,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-     <Header />
+    
+    <main>
+     
     <ProductContainer />
-    <Footer />
+    </main>
+   
       
     </div>
   )
