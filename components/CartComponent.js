@@ -29,7 +29,7 @@ const CartComponent = ({ closeSide }) => {
           <AiOutlineClose role={"button"} onClick={closeSide} className="font-semibold" />
       </div>
 
-      <div className="flex flex-col bg-smoke-white max-h-96 overflow-y-auto">
+      <div className="flex flex-col bg-smoke-white h-max overflow-y-auto">
         {
           cart.length === 0 ? (<h2 className="py-10 px-4">Your Cart is Empty!!</h2>) : (
             cart.map((item,i)=>(

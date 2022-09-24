@@ -32,7 +32,7 @@ const Header = () => {
   return (
     <>
       <div className="flex flex-col sticky top-0 z-40 bg-white">
-        <div className="flex flex-row justify-between justify-items-center text-center px-9 py-2 border-b border-bright-gray max-h-24">
+        <div className="flex flex-row justify-between justify-items-center text-center px-9 md:px-4 sm:px-2 xs:px-2 xxs:px-2 py-2 border-b border-bright-gray max-h-24">
           <Link href={"/"}>
             <a className="py-2 flex">
               <figure className="w-40 h-9 self-center">

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import Image from "next/image";
-import { useDispatch } from "react-redux";
 import { addToCart } from "../../redux/cart.slice";
 import RaitingStarsGroup from "./RaitingStarsGroup";
 import zoomIcon from "/public/icons/zoom-icon.png";
@@ -14,6 +14,9 @@ const ProductCard = ({ product, chooseColor }) => {
   const [favorite, setFavorite] = useState(false);
   const dispatch = useDispatch();
 
+  const cart = useSelector((state) => state.cart);
+  console.log(cart)
+
   const handleModal = () => {
     setIsOpenModal(!isOpenModal);
   };
@@ -21,6 +24,8 @@ const ProductCard = ({ product, chooseColor }) => {
   const handleFavorite = () => {
     setFavorite(!favorite);
   };
+
+  
 
   return (
     <>
@@ -87,7 +92,7 @@ const ProductCard = ({ product, chooseColor }) => {
           </div>
         </div>
 
-        <div className="hidden group-hover:flex flex-col justify-between h-40 bottom-44 absolute left-10">
+        <div className="hidden group-hover:flex flex-col justify-between h-32 bottom-48 absolute left-10">
           <figure onClick={handleModal} className="w-10 h-10 self-center">
             <Image
               className="opacity-60"
@@ -122,8 +127,8 @@ const ProductCard = ({ product, chooseColor }) => {
           </figure>
         </div>
 
-        <div className="bg-red rounded-br-full py-2 absolute bottom-36 left-0 pl-2 px-4">
-          <p className="text-xs text-white semibold tracking-wider flex-wrap">
+        <div className="bg-red w-20 pb-2 px-4 h-10 rounded-br-large rounded-tr absolute bottom-36 left-0 pl-2">
+          <p className="text-xs uppercase text-white semibold tracking-wider flex-wrap">
             Hızlı Teslimat
           </p>
         </div>

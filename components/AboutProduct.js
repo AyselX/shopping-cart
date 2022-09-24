@@ -6,7 +6,7 @@ import saleIcon from '/public/icons/sale-icon.png'
 
 export const ProductBadge = ({image, text}) => {
    return (
-    <div className="border border-bright-gray rounded h-min w-min py-2 px-4 mx-4">
+    <div className="border border-bright-gray rounded w-min py-2 px-3 mx-2">
         <figure className="w-8 h-7">
             <Image src={image} layout="responsive" width={20} height={20} alt="icon" />
         </figure>
@@ -18,8 +18,8 @@ export const ProductBadge = ({image, text}) => {
 
 const AboutProduct = () => {
   return (
-    <div className="border flex flex-row border-bright-gray h-min px-4 py-2 my-2 rounded">
-      <div className="flex flex-col leading-7">
+    <div className="border flex flex-row border-bright-gray h-min px-4 py-2 rounded">
+      <div className="flex flex-col leading-6">
         <h2 className="text-lg text"><span className="underline font-semibold">Koton</span> Kadın Antrasit Kaban 0KAK0 6697EW</h2>
         <p className="text-sm text-quick-silver font-semibold">
           Satıcı: <span className="text-black font-semibold">Koton</span>

@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import DetailsThumb from "./DetailsThimb";
+import DetailsThumb from "./DetailsThumb";
 
 class ProductSlider extends React.Component {
   state = {
@@ -12,7 +12,7 @@ class ProductSlider extends React.Component {
           "https://cdn.dsmcdn.com/mnresize/1200/1800/ty532/product/media/images/20220914/15/175190957/569179350/1/1_org_zoom.jpg",
           "https://cdn.dsmcdn.com/mnresize/1200/1800/ty532/product/media/images/20220914/15/175190957/569179350/2/2_org_zoom.jpg",
           "https://cdn.dsmcdn.com/mnresize/1200/1800/ty533/product/media/images/20220914/15/175190957/569179350/4/4_org_zoom.jpg",
-          "https://cdn.dsmcdn.com/mnresize/1200/1800/ty532/product/media/images/20220914/15/175190957/569179350/6/6_org_zoom.jpg",
+          
         ],
         count: 1,
       },
@@ -25,10 +25,10 @@ class ProductSlider extends React.Component {
   handleTab = (index) => {
     this.setState({ index: index });
     const images = this.myRef.current.children;
-    for (let i = 0; i < images.length; i++) {
-      images[i].className = images[i].className.replace("active", "");
-    }
-    images[index].className = "active";
+    // for (let i = 0; i < images.length; i++) {
+    //   images[i].className = images[i].className.replace("active", "");
+    // }
+    // images[index].className = "active";
   };
 
   componentDidMount() {
@@ -51,9 +51,9 @@ class ProductSlider extends React.Component {
             </div>
 
 
-            <figure className="big-img w-72 mx-6 h-full">
+            <figure className="w-72 mx-10 rounded">
               
-              <Image className="block max-h-56" src={item.src[index]} layout="responsive" width={500} height={900} objectFit="cover" alt={"product zoom"}  />
+              <Image className="block rounded" src={item.src[index]} layout="responsive" width={356} height={533} objectFit="cover" alt={"product zoom"}  />
             </figure>
           </div>
         ))}
