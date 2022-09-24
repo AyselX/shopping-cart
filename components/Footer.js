@@ -12,7 +12,7 @@ const Footer = () => {
   return (
     <div className="flex flex-col text-white">
       <div className="bg-charleston">
-        <div className="container mx-auto grid grid-cols-5 md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1 xxs:grid-cols-1 gap-4 py-10">
+        <div className="2xl:container xl:container lg:container md:container sm:container xs:container xxs:px-4 mx-auto grid grid-cols-5 md:grid-cols-2 lg:grid-cols-3 sm:grid-cols-2 xs:grid-cols-1 xxs:grid-cols-1 gap-4 py-10">
           <article className="flex flex-col leading-8">
             <h6 className="text-lg font-semibold">Biz kimiz?</h6>
             <Link href={"#"}>
@@ -159,14 +159,14 @@ const Footer = () => {
         </div>
 
         <div className="bg-raisin-black py-2">
-          <div className="flex flex-row justify-between container mx-auto">
-            <ul className="flex flex-row text-xs sm:text-xxs justify-between w-1/2">
+          <div className="flex flex-row justify-between 2xl:container xl:container lg:container sm:container md:container xs:mx-2 xxs:mx-2 mx-auto">
+            <ul className="flex flex-row text-xs sm:text-xxs justify-between w-1/2 xs:w-full xxs:w-full xs:justify-center xxs:justify-center">
               <li>© Telif Hakkı 2022 - testwebsite.com</li>
-              <li>Kullanım Koşulları</li>
-              <li>KVK ve Gizlilik Politikası</li>
+              <li className="xs:hidden xxs:hidden">Kullanım Koşulları</li>
+              <li className="xs:hidden xxs:hidden">KVK ve Gizlilik Politikası</li>
             </ul>
 
-            <div className="flex flex-row">
+            <div className="flex flex-row xs:hidden xxs:hidden">
               <figure className="w-10 h-5 mt-1 mx-2">
                 <Image
                   src={masterCard}

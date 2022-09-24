@@ -4,8 +4,8 @@ import { AiOutlineClose } from "react-icons/ai";
 export default function Modal({ closeModal, children }) {
   return (
     <>
-      <div className="fixed inset-0 z-50 items-center justify-center focus:outline-none hidden 2xl:flex xl:flex">
-        <div className="relative w-8/12">
+      <div className="fixed inset-0 z-50 items-center justify-center focus:outline-none hidden 2xl:flex xl:flex w-full">
+        <div className="relative py-4">
           <div className="relative flex flex-col w-full bg-white border-0 rounded-lg outline-none drop-shadow-xl focus:outline-none">
             <div className="flex flex-row justify-end px-2 py-2 justify-items-end">
               <button

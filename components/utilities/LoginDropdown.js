@@ -52,7 +52,7 @@ const LoginDropdown = () => {
       {isActive && (
         <div className="leading-7 bg-white shadow-custom-shadow rounded absolute px-4 py-3 pb-3 top-9 flex flex-col w-40 right-2 z-20">
           <Link href={"/"}>
-            <a className="bg-red text-white my-1 rounden-md">Giriş Yapın</a>
+            <a className="bg-red text-white my-1 rounded">Giriş Yapın</a>
           </Link>
           <Link href={"/"}>
             <a className="border border-platinum rounded my-1">Yeni üye</a>

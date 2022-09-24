@@ -26,7 +26,7 @@ const Menu = () => {
     setIndex(i);
   };
   return (
-    <div className="flex flex-row justify-between h-14 max-h-14 px-9">
+    <div className="flex flex-row justify-between h-14 max-h-14 px-9 md:px-4 sm:px-4 xs:px-4 xxs:px-4">
       <button className=" w-8 h-8 px-2 shadow-light-red shadow-lg self-center">
         <Image
           src={menuIcon}
