@@ -8,14 +8,20 @@ import Modal from "./Modal";
 import ProductPreview from "../ProductPreview";
 import favIcon from "/public/icons/favIcon.png";
 import likeIcon from "/public/icons/Like.png";
+import { TiTick } from "react-icons/ti";
 
 const ProductCard = ({ product, chooseColor }) => {
   const [isOpenModal, setIsOpenModal] = useState(false);
   const [favorite, setFavorite] = useState(false);
+  const [addCart, setAddCart] = useState(false);
   const dispatch = useDispatch();
 
   const cart = useSelector((state) => state.cart);
-  console.log(cart)
+  console.log(cart);
+
+  const handleClick = () => {
+    setAddCart(true);
+  };
 
   const handleModal = () => {
     setIsOpenModal(!isOpenModal);
@@ -24,8 +30,6 @@ const ProductCard = ({ product, chooseColor }) => {
   const handleFavorite = () => {
     setFavorite(!favorite);
   };
-
-  
 
   return (
     <>
@@ -82,12 +86,16 @@ const ProductCard = ({ product, chooseColor }) => {
             <button
               onClick={() => {
                 dispatch(addToCart(product));
+                handleClick();
               }}
               className={
-                "bg-red text-white py-1 px-4 invisible group-hover:visible rounded-full text-tiny font-semibold"
+                addCart
+                  ? "bg-green text-white py-1 px-2 invisible group-hover:visible rounded-full text-tiny font-semibold flex flex-row"
+                  : "bg-red text-white py-1 px-4 invisible group-hover:visible rounded-full text-tiny font-semibold"
               }
             >
-              Add to Cart
+              {addCart && <TiTick className="text-white text-lg mt-0.5" />}
+              {addCart ? "Added to Cart" : "Add to Cart"}
             </button>
           </div>
         </div>
